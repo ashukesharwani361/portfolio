@@ -40,13 +40,13 @@ export default function Homepage() {
                 </div>
 
                 {yelpProject && (
-                    <div onClick={() => navigate(`/projects/${yelpProject.name.toLowerCase().replace(/\s+/g, '')}`)} className={`mb-16 w-[50vw] md:w-[40vw] lg:w-[30vw]  bg-white/90 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer`}>
+                    <div onClick={() => navigate(`/projects/${yelpProject.name.toLowerCase().replace(/\s+/g, '')}`)} className={`mb-16 w-[70vw] md:w-[40vw] lg:w-[30vw]  bg-white/90 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer`}>
                         <img src={yelpProject.image[0]} alt={yelpProject.name} className="w-full h-64 md:h-72 lg:h-80 object-cover dark:border-white" />
                         <div className="p-6">
                             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                                 {yelpProject.name}
                             </h5>
-                            <p className="font-normal text-gray-700 dark:text-white pt-3 line-clamp-4">
+                            <p className="font-normal text-gray-700 dark:text-white pt-3 line-clamp-2 md:line-clamp-4">
                                 {yelpProject.description}
                             </p>
                         </div>
@@ -54,13 +54,13 @@ export default function Homepage() {
                 )}
 
                 {codebookProject && (
-                    <div onClick={() => navigate(`/projects/${codebookProject.name.toLowerCase().replace(/\s+/g, '')}`)} className={`mb-16 w-[50vw] md:w-[40vw] lg:w-[30vw]  bg-white/90 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer`}>
+                    <div onClick={() => navigate(`/projects/${codebookProject.name.toLowerCase().replace(/\s+/g, '')}`)} className={`mb-16 w-[70vw] md:w-[40vw] lg:w-[30vw]  bg-white/90 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer`}>
                         <img src={codebookProject.image[0]} alt={codebookProject.name} className="w-full h-64 md:h-72 lg:h-80 object-cover" />
                         <div className="p-6">
                             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                                 {codebookProject.name}
                             </h5>
-                            <p className="font-normal text-gray-700 dark:text-white pt-3">
+                            <p className="font-normal text-gray-700 dark:text-white pt-3 line-clamp-2 md:line-clamp-4">
                                 {codebookProject.description}
                             </p>
                         </div>
