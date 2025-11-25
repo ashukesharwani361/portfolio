@@ -18,7 +18,7 @@ export const data = [
             "YelpCamp is a full‑stack campground platform with user authentication, CRUD capabilities, and campground reviews. Built with modern JavaScript for an interactive, data-driven experience.",
         image: [yelpcamp, yelpcamp2, yelpcamp3],
         demoUrl: "https://yelpcamp2-u659.onrender.com/",
-        repoUrl: "https://github.com/ashukesharwani361/yelpcamp",
+        repoUrl: "https://github.com/ashukesharwani361/yelpcamp2",
         toolsUsed: [
             "JavaScript",
             "Node.js",
@@ -52,7 +52,7 @@ export const data = [
         description:
             "Cinemate is a movie discovery web application that allows users to explore and find information about movies, including details, ratings, and trailers.",
         image: [cinemate, cinemate2],
-        demoUrl: "https://cinemate-app.netlify.app",
+        demoUrl: "https://cinemate-reactapplication.netlify.app/",
         repoUrl: "https://github.com/ashukesharwani361/Cinemate",
         toolsUsed: ["JavaScript", "React", "Tailwind CSS", "TMDB API", "React Router"],
     },
@@ -62,7 +62,7 @@ export const data = [
         description:
             "WriteNode is a minimalist writing app designed to help you focus on your writing without distractions. It offers a clean interface and essential features for writers.",
         image: [writenode],
-        demoUrl: "https://writenode-app.netlify.app",
+        demoUrl: "https://writenode-ra.netlify.app/",
         repoUrl: "https://github.com/ashukesharwani361/writenode",
         toolsUsed: ["JavaScript", "React", "Vite", "Tailwind CSS", "Local Storage", "Firebase Authentication", "Firestore"],
     },
