@@ -5,13 +5,19 @@ export default function Footer() {
   return (
     <footer className="w-full bg-white dark:bg-slate-800 text-gray-700 dark:text-white py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold">Contact Me</h2>
+          <p className="text-gray-500 dark:text-gray-300 mt-2">
+            Feel free to reach out for opportunities or collaboration
+          </p>
+        </div>
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div className="w-full md:w-auto">
             <div className="text-base sm:text-lg md:text-xl font-semibold dark:text-white text-center md:text-left">Ashutosh Kesharwani</div>
             <div className="text-xs sm:text-sm md:text-sm text-gray-700 dark:text-gray-200 text-center md:text-left">Fullstack developer — building fast and accessible web experiences</div>
           </div>
 
-            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 w-full md:w-auto justify-center md:justify-end">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 w-full md:w-auto justify-center md:justify-end">
             <a id="footer-email" href="mailto:ashukesharwani361@gmail.com" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-100 hover:text-gray-800 dark:hover:text-gray-200 px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors duration-200" aria-label="Send email">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 12H8m8 0a4 4 0 10-8 0c0 1.657 1.343 3 3 3h2a3 3 0 003-3z"></path></svg>
               <span>ashukesharwani361@gmail.com</span>

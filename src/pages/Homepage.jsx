@@ -1,13 +1,18 @@
 import { useNavigate } from 'react-router-dom';
 import { data } from '../data/projectsData';
 import ScrollToTop from '../components/scrollTo';
+import Skills from '../data/Skills';
 
 export default function Homepage() {
     const navigate = useNavigate();
 
     // get specific projects by id instead of mapping
-    const yelpProject = data.find(p => p.id === 1)
-    const codebookProject = data.find(p => p.id === 2)
+    const yelpProject = data.find(p => p.id === 1);
+    const codebookProject = data.find(p => p.id === 2);
+
+    // const skills = ["HTML", "CSS", "JavaScript", "React", "Next.js", "Node.js",
+    //      "Express", "MongoDB", "Mongoose", "Git", "Tailwind CSS", "TypeScript", 
+    //      "Firebase", "Jest"];
 
     ScrollToTop();
 
@@ -30,17 +35,35 @@ export default function Homepage() {
 
             </div>
 
+            <div className='dark:bg-slate-900 max-w-full px-5 flex justify-center'>
+                <Skills />
+            </div>            
+
+            {/* <section className="min-h-screen min-w-full flex items-center flex-wrap justify-evenly p-4 dark:bg-slate-900">
+                <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 group">
+                    <h2 id="projects" tabIndex="0" className="text-3xl sm:text-4xl font-extrabold text-indigo-600 dark:text-white">Skills</h2>
+                    <div className="mt-2 w-16 h-1 bg-indigo-400 dark:bg-white rounded transition-all duration-300 group-hover:w-28 group-focus-within:w-28"></div>
+                </div>
+                <div className='w-full  rounded-3xl py-16 max-w-screen-sm mx-auto px-4 sm:px-6 lg:px-8 mb-8 gap-3 flex flex-wrap justify-center shadow-lg shadow-purple-600 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-700 dark:hover:shadow-green-400'>
+                    {skills.map((skill, index) => (
+                        <span key={index} className="inline-block bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded-full px-4 py-2 text-sm font-semibold mr-2 mb-2 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-200 cursor-pointer hover:scale-110 hover:text-lime-500 dark:hover:text-amber-400">
+                            {skill}
+                        </span>
+                    ))}
+                </div>
+            </section> */}
+
             <section
                 className="min-h-screen min-w-full flex items-center flex-wrap justify-evenly p-4 dark:bg-slate-900"
                 
             >
                 <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 group">
-                    <h2 id="projects" tabIndex="0" className="text-3xl sm:text-4xl font-extrabold text-indigo-600 dark:text-white">Projects</h2>
-                    <div className="mt-2 w-16 h-1 bg-indigo-400 dark:bg-white rounded transition-all duration-300 group-hover:w-28 group-focus-within:w-28"></div>
+                    <h2 id="projects" tabIndex="0" className="text-3xl sm:text-4xl font-extrabold text-purple-700 dark:text-white">Projects</h2>
+                    <div className="mt-2 w-16 h-1 bg-purple-500 dark:bg-white rounded transition-all duration-300 group-hover:w-28 group-focus-within:w-28"></div>
                 </div>
 
-                {yelpProject && (
-                    <div onClick={() => navigate(`/projects/${yelpProject.name.toLowerCase().replace(/\s+/g, '')}`)} className={`mb-16 w-[70vw] md:w-[40vw] lg:w-[30vw]  bg-white/90 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer`}>
+                {/* {yelpProject && (
+                    <div onClick={() => navigate(`/projects/${yelpProject.name.toLowerCase().replace(/\s+/g, '')}`)} className="mb-16 w-[70vw] md:w-[40vw] lg:w-[30vw] bg-white/90 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
                         <img src={yelpProject.image[0]} alt={yelpProject.name} className="w-full h-64 md:h-72 lg:h-80 object-cover dark:border-white" />
                         <div className="p-6">
                             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -51,16 +74,30 @@ export default function Homepage() {
                             </p>
                         </div>
                     </div>
+                )} */}
+
+                {yelpProject && (
+                    <div onClick={() => navigate(`/projects/${yelpProject.name.toLowerCase().replace(/\s+/g, '')}`)} className="mb-16 w-full max-w-xs bg-white/90 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-green-400 hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
+                        <img src={yelpProject.image[0]} alt={yelpProject.name} className="w-full h-fit object-contain" />
+                        <div className="p-4">
+                            <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                {yelpProject.name}
+                            </h5>
+                            <p className="font-normal text-sm text-gray-700 dark:text-white pt-3 line-clamp-2 md:line-clamp-4">
+                                {yelpProject.description}
+                            </p>
+                        </div>
+                    </div>
                 )}
 
                 {codebookProject && (
-                    <div onClick={() => navigate(`/projects/${codebookProject.name.toLowerCase().replace(/\s+/g, '')}`)} className={`mb-16 w-[70vw] md:w-[40vw] lg:w-[30vw]  bg-white/90 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer`}>
-                        <img src={codebookProject.image[0]} alt={codebookProject.name} className="w-full h-64 md:h-72 lg:h-80 object-cover" />
-                        <div className="p-6">
-                            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <div onClick={() => navigate(`/projects/${codebookProject.name.toLowerCase().replace(/\s+/g, '')}`)} className={`mb-16 w-full max-w-xs bg-white/90 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-green-400 hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer`}>
+                        <img src={codebookProject.image[0]} alt={codebookProject.name} className="w-full h-fit object-contain" />
+                        <div className="p-4">
+                            <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                                 {codebookProject.name}
                             </h5>
-                            <p className="font-normal text-gray-700 dark:text-white pt-3 line-clamp-2 md:line-clamp-4">
+                            <p className="font-normal text-sm text-gray-700 dark:text-white pt-3 line-clamp-2 md:line-clamp-4">
                                 {codebookProject.description}
                             </p>
                         </div>

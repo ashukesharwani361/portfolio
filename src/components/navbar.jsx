@@ -68,6 +68,7 @@ export default function Navbar() {
                     <nav className="hidden md:flex items-center space-x-2">
                         <NavLink to="/" className={linkClass} end>Home</NavLink>
                         <NavLink to="/projects" className={linkClass}>Projects</NavLink>
+                        <NavLink to="/certificates" className={linkClass}>Certificates</NavLink>
                         <button onClick={scrollToFooterEmail} className={linkClass({ isActive: false })}>Contact</button>
                         <button onClick={() => setTheme(prev => prev === 'dark' ? 'light' : 'dark')} aria-label="Toggle theme" className={linkClass({ isActive: false })}>
                             {theme === 'dark' ? (
