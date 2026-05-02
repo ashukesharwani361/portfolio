@@ -19,7 +19,7 @@ export default function Homepage() {
     return (
         <>
             <div className="min-w-full flex items-center justify-center p-4 dark:bg-slate-900">
-                <div className="w-full max-w-4xl mx-auto bg-white/30 dark:bg-gray-800 border border-white/30 dark:border-white/10 rounded-2xl shadow-2xl hover:shadow-indigo-400/40 hover:scale-105 transition-all duration-300 p-8 sm:p-12 lg:p-20 backdrop-blur-xl">
+                <div className="w-full mt-12 lg:mt-16 max-w-4xl mx-auto bg-white/30 dark:bg-gray-800 border border-white/30 dark:border-white/10 rounded-2xl shadow-2xl hover:shadow-indigo-400/40 hover:scale-105 transition-all duration-300 p-8 sm:p-12 lg:p-20 backdrop-blur-xl">
                     <div className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-3 tracking-tight">
                         Hello,
                     </div>
