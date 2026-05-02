@@ -14,19 +14,17 @@ export default function Projects() {
                 <div className="mt-4 w-20 h-1 bg-indigo-400 rounded"></div>
             </div>
 
-            <div className="mt-6 w-full flex flex-wrap justify-center">
+            <div className="mt-6 w-full px-4 grid gap-10 justify-items-center sm:grid-cols-2 xl:grid-cols-3">
             {data.map((d) => (
                 <div
                     key={d.id ?? d.name}
                     onClick={() => navigate(`/projects/${d.name.toLowerCase().replace(/\s+/g, '')}`)}
-                    className={`mx-auto mb-16 w-[50vw] md:w-[40vw] lg:w-[30vw] bg-white/90 dark:bg-gray-700 border gap-8 border-gray-200 dark:border-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-2xl hover:shadow-green-400 transition-all duration-300 hover:scale-105 cursor-pointer`}
+                    className="w-full max-w-md mx-auto mb-6 bg-white/90 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-2xl hover:shadow-green-400 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] cursor-pointer"
                 >
-                    <img src={Array.isArray(d.image) ? d.image[0] : d.image} alt={d.name} className="w-full h-fit object-contain" />
+                    <img src={Array.isArray(d.image) ? d.image[0] : d.image} alt={d.name} className="w-full h-56 object-cover" />
                     <div className="p-4 sm:p-6">
                         <h5 className="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{d.name}</h5>
-                        {/* small screens: two-line truncated description; sm+ show full description */}
-                        <p className="block sm:hidden font-normal text-gray-700 dark:text-gray-400 pt-2 line-clamp-2">{d.description}</p>
-                        <p className="hidden sm:block font-normal text-gray-700 dark:text-gray-400 pt-3">{d.description}</p>
+                        <p className="font-normal text-gray-700 dark:text-gray-400 pt-3 line-clamp-3 sm:line-clamp-4">{d.description}</p>
                     </div>
                 </div>
             ))}

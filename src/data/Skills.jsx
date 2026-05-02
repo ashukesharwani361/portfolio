@@ -91,33 +91,33 @@ export default function Skills() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="min-w-full mx-auto px-6 py-20 bg-white dark:bg-slate-900 rounded-2xl">
+    <section ref={sectionRef} className="min-w-full mx-auto px-4 py-12 sm:px-6 sm:py-20 bg-white dark:bg-slate-900 rounded-2xl">
 
       {/* Header */}
       <div
-        className="mb-10"
+        className="mb-8 sm:mb-10"
         style={{
           opacity: visible ? 1 : 0,
           transform: visible ? "translateY(0)" : "translateY(16px)",
           transition: "opacity 0.5s ease, transform 0.5s ease",
         }}
       >
-        <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-gray-400 dark:text-gray-400 mb-2">
+        <p className="text-[10px] sm:text-[11px] font-medium tracking-[0.18em] uppercase text-gray-400 dark:text-gray-400 mb-2">
           What I work with
         </p>
 
-        <h2 className="relative inline-block text-5xl text-purple-700 font-extrabold dark:text-white leading-none">
+        <h2 className="relative inline-block text-4xl sm:text-5xl text-purple-700 font-extrabold dark:text-white leading-tight">
           Skills
           <span className="absolute left-0 bottom-1.5 w-full h-2.5 bg-violet-400 opacity-20 rounded-sm -z-10" />
         </h2>
 
-        <p className="text-[15px] text-gray-500 dark:text-gray-300 font-light mt-3">
+        <p className="max-w-xl text-sm sm:text-[15px] text-gray-500 dark:text-gray-300 font-light mt-3">
           Technologies I use to build full-stack web applications
         </p>
       </div>
 
       {/* Skill cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {skillGroups.map((group, i) => (
           <SkillGroup
             key={group.id}
@@ -130,14 +130,14 @@ export default function Skills() {
 
       {/* Divider */}
       <div
-        className="flex items-center gap-3 my-8"
+        className="flex flex-col sm:flex-row items-center gap-3 my-8"
         style={{
           opacity: visible ? 1 : 0,
           transition: "opacity 0.5s ease 400ms",
         }}
       >
         <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700" />
-        <span className="text-[11px] tracking-widest text-gray-400 dark:text-gray-400 uppercase">
+        <span className="text-[10px] sm:text-[11px] tracking-widest text-gray-400 dark:text-gray-400 uppercase">
           at a glance
         </span>
         <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700" />
@@ -145,14 +145,14 @@ export default function Skills() {
 
       {/* Stats */}
       <div
-        className="flex gap-8"
+        className="flex flex-col gap-6 sm:flex-row sm:justify-between"
         style={{
           opacity: visible ? 1 : 0,
           transition: "opacity 0.5s ease 500ms",
         }}
       >
         {stats.map((stat) => (
-          <div key={stat.label} className="flex flex-col gap-0.5">
+          <div key={stat.label} className="flex flex-col gap-1.5 items-start sm:items-center">
             <span className="text-3xl font-extrabold text-gray-900 dark:text-white leading-none">
               {stat.value}
             </span>

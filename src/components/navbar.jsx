@@ -104,6 +104,7 @@ export default function Navbar() {
                 <div className="flex flex-col gap-2" role="menu" aria-hidden={!open}>
                     <NavLink to="/" className={linkClass} end onClick={() => setOpen(false)} role="menuitem">Home</NavLink>
                     <NavLink to="/projects" className={linkClass} onClick={() => setOpen(false)} role="menuitem">Projects</NavLink>
+                    <NavLink to="/certificates" className={linkClass} onClick={() => setOpen(false)} role="menuitem">Certificates</NavLink>
                     <button onClick={() => { setOpen(false); scrollToFooterEmail() }} className={linkClass({ isActive: false })} role="menuitem">Contact</button>
                     <button onClick={() => { setOpen(false); setTheme(prev => prev === 'dark' ? 'light' : 'dark') }} className={linkClass({ isActive: false })} aria-label="Toggle theme mobile" role="menuitem">
                             {theme === 'dark' ? (

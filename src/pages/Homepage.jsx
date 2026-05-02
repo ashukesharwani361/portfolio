@@ -18,26 +18,22 @@ export default function Homepage() {
 
     return (
         <>
-            <div
-                className="min-h-screen min-w-full flex items-center justify-center p-4 dark:bg-slate-900"
-            >
-
-                <div className="max-w-full mx-auto bg-white/30 dark:bg-gray-800 border border-white/30 dark:border-white/10 rounded-2xl shadow-2xl hover:shadow-indigo-400/40 hover:scale-105 transition-all duration-300 p-20 backdrop-blur-xl">
-                    <div className="text-4xl font-extrabold text-gray-900 dark:text-white mb-3 tracking-tight">
+            <div className="min-w-full flex items-center justify-center p-4 dark:bg-slate-900">
+                <div className="w-full max-w-4xl mx-auto bg-white/30 dark:bg-gray-800 border border-white/30 dark:border-white/10 rounded-2xl shadow-2xl hover:shadow-indigo-400/40 hover:scale-105 transition-all duration-300 p-8 sm:p-12 lg:p-20 backdrop-blur-xl">
+                    <div className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-3 tracking-tight">
                         Hello,
                     </div>
-                    <div className="text-2xl text-gray-700 dark:text-gray-300">
+                    <div className="text-base sm:text-xl text-gray-700 dark:text-gray-300 leading-7 sm:leading-8">
                         I'm <span className="text-indigo-600 font-bold dark:text-indigo-400">Ashutosh Kesharwani</span>
                         <br />
                         — a fullstack developer crafting fast, accessible, and delightful web experiences.
                     </div>
                 </div>
-
             </div>
 
             <div className='dark:bg-slate-900 max-w-full px-5 flex justify-center'>
                 <Skills />
-            </div>            
+            </div>
 
             {/* <section className="min-h-screen min-w-full flex items-center flex-wrap justify-evenly p-4 dark:bg-slate-900">
                 <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 group">
@@ -53,65 +49,55 @@ export default function Homepage() {
                 </div>
             </section> */}
 
-            <section
-                className="min-h-screen min-w-full flex items-center flex-wrap justify-evenly p-4 dark:bg-slate-900"
-                
-            >
-                <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 group">
+            <section className="w-full py-10 px-4 dark:bg-slate-900">
+                <div className="w-full max-w-7xl mx-auto px-0 sm:px-6 lg:px-8 mb-8 group">
                     <h2 id="projects" tabIndex="0" className="text-3xl sm:text-4xl font-extrabold text-purple-700 dark:text-white">Projects</h2>
                     <div className="mt-2 w-16 h-1 bg-purple-500 dark:bg-white rounded transition-all duration-300 group-hover:w-28 group-focus-within:w-28"></div>
                 </div>
 
-                {/* {yelpProject && (
-                    <div onClick={() => navigate(`/projects/${yelpProject.name.toLowerCase().replace(/\s+/g, '')}`)} className="mb-16 w-[70vw] md:w-[40vw] lg:w-[30vw] bg-white/90 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                        <img src={yelpProject.image[0]} alt={yelpProject.name} className="w-full h-64 md:h-72 lg:h-80 object-cover dark:border-white" />
-                        <div className="p-6">
-                            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                {yelpProject.name}
-                            </h5>
-                            <p className="font-normal text-gray-700 dark:text-white pt-3 line-clamp-2 md:line-clamp-4">
-                                {yelpProject.description}
-                            </p>
+                <div className="grid gap-6 justify-items-center sm:grid-cols-2 xl:grid-cols-2">
+                    {yelpProject && (
+                        <div onClick={() => navigate(`/projects/${yelpProject.name.toLowerCase().replace(/\s+/g, '')}`)} className="w-full max-w-sm bg-white/90 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-green-400 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] cursor-pointer">
+                            <img src={yelpProject.image[0]} alt={yelpProject.name} className="w-full h-56 object-cover" />
+                            <div className="p-4 sm:p-5">
+                                <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                    {yelpProject.name}
+                                </h5>
+                                <p className="font-normal text-sm text-gray-700 dark:text-gray-300 pt-3 line-clamp-3 sm:line-clamp-4">
+                                    {yelpProject.description}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                )} */}
+                    )}
 
-                {yelpProject && (
-                    <div onClick={() => navigate(`/projects/${yelpProject.name.toLowerCase().replace(/\s+/g, '')}`)} className="mb-16 w-full max-w-xs bg-white/90 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-green-400 hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                        <img src={yelpProject.image[0]} alt={yelpProject.name} className="w-full h-fit object-contain" />
-                        <div className="p-4">
-                            <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                {yelpProject.name}
-                            </h5>
-                            <p className="font-normal text-sm text-gray-700 dark:text-white pt-3 line-clamp-2 md:line-clamp-4">
-                                {yelpProject.description}
-                            </p>
+                    {codebookProject && (
+                        <div onClick={() => navigate(`/projects/${codebookProject.name.toLowerCase().replace(/\s+/g, '')}`)} className="w-full max-w-sm bg-white/90 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-green-400 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] cursor-pointer">
+                            <img src={codebookProject.image[0]} alt={codebookProject.name} className="w-full h-56 object-cover" />
+                            <div className="p-4 sm:p-5">
+                                <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                    {codebookProject.name}
+                                </h5>
+                                <p className="font-normal text-sm text-gray-700 dark:text-gray-300 pt-3 line-clamp-3 sm:line-clamp-4">
+                                    {codebookProject.description}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                )}
+                    )}
+                </div>
 
-                {codebookProject && (
-                    <div onClick={() => navigate(`/projects/${codebookProject.name.toLowerCase().replace(/\s+/g, '')}`)} className={`mb-16 w-full max-w-xs bg-white/90 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-green-400 hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer`}>
-                        <img src={codebookProject.image[0]} alt={codebookProject.name} className="w-full h-fit object-contain" />
-                        <div className="p-4">
-                            <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                {codebookProject.name}
-                            </h5>
-                            <p className="font-normal text-sm text-gray-700 dark:text-white pt-3 line-clamp-2 md:line-clamp-4">
-                                {codebookProject.description}
-                            </p>
-                        </div>
-                    </div>
-                )}
-
-                {/* View more button: navigates to the Projects listing */}
                 <div className="w-full flex justify-center mt-6">
                     <button onClick={() => navigate('/projects')} className="px-6 py-3 bg-white/90 text-indigo-700 rounded-md shadow hover:bg-white transition-all duration-200">
                         View more projects
                     </button>
                 </div>
-
             </section>
+
+            {/* View more button: navigates to the Projects listing
+            <div className="w-full flex justify-center mt-6">
+                <button onClick={() => navigate('/projects')} className="px-6 py-3 bg-white/90 text-indigo-700 rounded-md shadow hover:bg-white transition-all duration-200">
+                    View more projects
+                </button>
+            </div> */}
 
         </>
     )
